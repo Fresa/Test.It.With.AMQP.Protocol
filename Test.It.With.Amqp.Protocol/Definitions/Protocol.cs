@@ -12,7 +12,7 @@ namespace Test.It.With.Amqp.Protocol.Definitions
         public Protocol(XmlNode definition)
         {
             var amqpNodes = definition.SelectNodes("amqp");
-            if (amqpNodes.IsNullOrEmpty())
+            if (amqpNodes == null || amqpNodes.Count == 0)
             {
                 throw new MissingXmlNodeException("amqp", definition);
             }
@@ -44,7 +44,7 @@ namespace Test.It.With.Amqp.Protocol.Definitions
         private static IDictionary<string, Constant> ParseConstants(XmlNode amqpNode)
         {
             var constantNodes = amqpNode.SelectNodes("constant");
-            if (constantNodes.IsNullOrEmpty())
+            if (constantNodes == null || constantNodes.Count == 0)
             {
                 throw new MissingXmlNodesException("constant", amqpNode);
             }
@@ -70,7 +70,7 @@ namespace Test.It.With.Amqp.Protocol.Definitions
         private static IDictionary<string, Domain> ParseDomains(XmlNode amqpNode, Protocol protocol)
         {
             var domainNodes = amqpNode.SelectNodes("domain");
-            if (domainNodes.IsNullOrEmpty())
+            if (domainNodes == null || domainNodes.Count == 0)
             {
                 throw new MissingXmlNodeException("domain", amqpNode);
             }
@@ -97,7 +97,7 @@ namespace Test.It.With.Amqp.Protocol.Definitions
         private static IEnumerable<Rule> ParseRules(XmlNode domainNode)
         {
             var ruleNodes = domainNode.SelectNodes("rule");
-            if (ruleNodes.IsNull())
+            if (ruleNodes == null)
             {
                 yield break;
             }
@@ -119,7 +119,7 @@ namespace Test.It.With.Amqp.Protocol.Definitions
         private static IEnumerable<Assert> ParseAsserts(XmlNode node, Protocol protocol)
         {
             var assertNodes = node.SelectNodes("assert");
-            if (assertNodes.IsNull())
+            if (assertNodes == null)
             {
                 yield break;
             }
@@ -168,7 +168,7 @@ namespace Test.It.With.Amqp.Protocol.Definitions
         private static IDictionary<string, Class> ParseClasses(XmlNode node, Protocol protocol)
         {
             var classNodes = node.SelectNodes("class");
-            if (classNodes.IsNullOrEmpty())
+            if (classNodes == null || classNodes.Count == 0)
             {
                 throw new MissingXmlNodeException("class", node);
             }
@@ -197,7 +197,7 @@ namespace Test.It.With.Amqp.Protocol.Definitions
         private static IReadOnlyDictionary<string, Method> ParseMethods(XmlNode node, Protocol protocol)
         {
             var methodNodes = node.SelectNodes("method");
-            if (methodNodes.IsNullOrEmpty())
+            if (methodNodes == null || methodNodes.Count == 0)
             {
                 throw new MissingXmlNodeException("method", node);
             }
@@ -230,7 +230,7 @@ namespace Test.It.With.Amqp.Protocol.Definitions
         {
             var fieldNodes = node.SelectNodes("field");
             var fields = new Dictionary<string, Field>();
-            if (fieldNodes.IsNullOrEmpty())
+            if (fieldNodes == null || fieldNodes.Count == 0)
             {
                 return fields;
             }
@@ -270,7 +270,7 @@ namespace Test.It.With.Amqp.Protocol.Definitions
         {
             var responseNodes = node.SelectNodes("response");
             var responses = new Dictionary<string, Response>();
-            if (responseNodes.IsNullOrEmpty())
+            if (responseNodes == null || responseNodes.Count == 0)
             {
                 return responses;
             }

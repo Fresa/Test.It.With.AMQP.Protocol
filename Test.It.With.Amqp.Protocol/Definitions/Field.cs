@@ -5,6 +5,12 @@ namespace Test.It.With.Amqp.Protocol.Definitions
 {
     public class Field
     {
+        public Field(string name, Domain domain)
+        {
+            Name = name;
+            Domain = domain;
+        }
+
         public string Name { get; }
         public Domain Domain { get; }
 
@@ -12,11 +18,5 @@ namespace Test.It.With.Amqp.Protocol.Definitions
         public string Documentation { get; set; }
         public IEnumerable<Rule> Rules { get; set; } = Enumerable.Empty<Rule>();
         public IEnumerable<Assert> Asserts { get; set; } = Enumerable.Empty<Assert>();
-
-        public Field(string name, Domain domain)
-        {
-            Name = name;
-            Domain = domain;
-        }
     }
 }

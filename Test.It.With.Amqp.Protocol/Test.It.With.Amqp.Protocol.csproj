@@ -1,19 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net47</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
         <Authors>Fredrik Arvidsson</Authors>
         <Company />
         <Copyright>Copyright ©  2017</Copyright>
+        <RepositoryUrl>https://github.com/Fresa/Test.It.With.AMQP.Protocol</RepositoryUrl>
+        <PackageLicenseUrl>https://github.com/Fresa/Test.It.With.AMQP.Protocol/blob/master/LICENSE</PackageLicenseUrl>
+        <Description>Protocol definitions for AMQP to be used with Test.It.With.AMQP test framework.</Description>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.TextTemplating.15.0">
-          <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.TextTemplating.15.0.dll</HintPath>
-        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Xml" />
-    </ItemGroup>
-    <ItemGroup>
-        <PackageReference Include="JetBrains.Annotations" version="11.0.0" />
     </ItemGroup>
 </Project>

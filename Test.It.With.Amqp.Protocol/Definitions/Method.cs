@@ -5,6 +5,12 @@ namespace Test.It.With.Amqp.Protocol.Definitions
 {
     public class Method
     {
+        public Method(string name, int index)
+        {
+            Name = name;
+            Index = index;
+        }
+
         public string Name { get; }
         public int Index { get; }
 
@@ -16,11 +22,5 @@ namespace Test.It.With.Amqp.Protocol.Definitions
         public IEnumerable<Rule> Rules { get; set; } = Enumerable.Empty<Rule>();
         public IEnumerable<Chassis> Chassis { get; set; } = Enumerable.Empty<Chassis>();
         public bool HasContent { get; set; }
-
-        public Method(string name, int index)
-        {
-            Name = name;
-            Index = index;
-        }
     }
 }
