@@ -2,15 +2,16 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <Authors>Fredrik Arvidsson</Authors>
-        <Company />
-        <Copyright>Copyright ©  2017</Copyright>
+        <Company>FKAN Consulting AB</Company>
+        <Copyright>Copyright © 2017 Fredrik Arvidsson</Copyright>
         <RepositoryUrl>https://github.com/Fresa/Test.It.With.AMQP.Protocol</RepositoryUrl>
         <PackageLicenseUrl>https://github.com/Fresa/Test.It.With.AMQP.Protocol/blob/master/LICENSE</PackageLicenseUrl>
         <Description>Protocol definitions for AMQP to be used with Test.It.With.AMQP test framework.</Description>
+        <PackageTags>Test AMQP protocol</PackageTags>
+        <PackageReleaseNotes />
+        <Version>1.0.0</Version>
+        <PackageVersion></PackageVersion>
+        <IncludeSource>True</IncludeSource>
+        <IncludeSymbols>True</IncludeSymbols>
     </PropertyGroup>
-    <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Core" />
-        <Reference Include="System.Xml" />
-    </ItemGroup>
 </Project>
